@@ -9,7 +9,9 @@ def user_register():
     password = input("Ingrese contraseña: ")
     users.append({"usuario": user, "tipo": type, "contrasena": password})
     print("Usuario registrado con éxito.\n")
+#Funcion de regritro completada
 
-user_register()
+
+
 
 
