@@ -12,4 +12,16 @@ def user_register():
 
 user_register()
 
+#Funcion login
+def login():
+    print("\n--- Login ---")
+    user = input("Usuario: ")
+    password = input("Contraseña: ")
+    for u in users:
+        if u["usuario"] == user and u["contrasena"] == password:
+            print("Login exitoso\n")
+            return u
+    print("Usuario o contraseña incorrectos.\n")
+    return None
+
 
