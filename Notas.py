@@ -44,5 +44,27 @@ def check_note():
     else:
         print("No se encontraron notas.\n")
 
+#Funcion del menu
+def menu(usuario):
+    while True:
+        print("\n--- Menú ---")
+        print("1. Ver Notas")
+        if usuario["tipo"] == "profesor":
+            print("2. Agregar Nota")
+        print("3. Cerrar Sesión")
+        option = input("Seleccione una opción: ")
+        match  option:
+            case "1":
+                check_note()
+            case "2":
+                if usuario["tipo"] == "profesor":
+                    add_note()
+            case "3":
+                print("Cerrando sesión...\n")
+                break
+            case _:
+                print("Opción inválida.\n")
+
+
 
 
