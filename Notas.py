@@ -10,7 +10,7 @@ def user_register():
     users.append({"usuario": user, "tipo": type, "contrasena": password})
     print("Usuario registrado con éxito.\n")
 
-user_register()
+
 
 #Funcion login
 def login():
@@ -65,6 +65,27 @@ def menu(usuario):
             case _:
                 print("Opción inválida.\n")
 
+#Funcion del menu
+def main():
+    while True:
+        print("\n--- Sistema de Gestión de Notas ---")
+        print("1. Registrar Usuario")
+        print("2. Iniciar Sesión")
+        print("3. Salir")
+        opcion = input("Seleccione una opción: ")
+        match opcion:
+            case "1":
+                user_register()
+            case "2":
+                usuario = login()
+                if usuario:
+                    menu(usuario)
+            case "3":
+                print("Saliendo...\n")
+                break
+            case _:
+                print("Opción inválida.\n")
 
+main()
 
 
